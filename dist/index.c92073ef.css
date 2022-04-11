@@ -1,0 +1,220 @@
+.map {
+  width: 100%;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.header {
+  height: 50px;
+  grid-area: header;
+  font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+  font-size: 25px;
+}
+
+.grid-container {
+  grid-template-areas: "header header"
+                       "left right";
+  display: grid;
+}
+
+.left {
+  width: 17vw;
+  height: 90vh;
+  border: 5px solid gray;
+  grid-area: left;
+}
+
+.toc {
+  margin-left: 10px;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.right {
+  width: 80vw;
+  height: 90vh;
+  border: 5px solid gray;
+  grid-area: right;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.ol-tooltip {
+  color: #fff;
+  opacity: .7;
+  white-space: nowrap;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+  background: #00000080;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  position: relative;
+}
+
+.ol-tooltip-measure {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.ol-tooltip-static {
+  color: #000;
+  background-color: #fc3;
+  border: 1px solid #fff;
+}
+
+.ol-tooltip-measure:before, .ol-tooltip-static:before {
+  content: "";
+  border-top: 6px solid #00000080;
+  border-left: 6px solid #0000;
+  border-right: 6px solid #0000;
+  margin-left: -7px;
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+}
+
+.ol-tooltip-static:before {
+  border-top-color: #fc3;
+}
+
+.mousePosition {
+  background-color: #e1e1e199;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  position: fixed;
+  inset: auto auto 5% 50%;
+  transform: translateX(-50%);
+}
+
+.myButton {
+  color: #fff;
+  text-align: center;
+  height: 25px;
+  width: 25px;
+  background-color: #1655a799;
+  border: none;
+  border-radius: 2px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.myButton:hover {
+  background-color: #003c88;
+}
+
+.myButton.clicked, .myButton.clicked:hover {
+  background-color: #16aa23;
+}
+
+.homeButtonDiv {
+  margin: 10px auto auto 10px;
+  display: block;
+  position: relative;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner:after {
+  content: "";
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border: 5px solid #b4b4b499;
+  border-top-color: #0009;
+  border-radius: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  animation: spinner .6s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.ol-popup {
+  min-width: 280px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  position: absolute;
+  bottom: 12px;
+  left: -50px;
+  box-shadow: 0 1px 4px #0003;
+}
+
+.ol-popup:after, .ol-popup:before {
+  content: " ";
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border: solid #0000;
+  position: absolute;
+  top: 100%;
+}
+
+.ol-popup:after {
+  border-width: 10px;
+  border-top-color: #fff;
+  margin-left: -10px;
+  left: 48px;
+}
+
+.ol-popup:before {
+  border-width: 11px;
+  border-top-color: #ccc;
+  margin-left: -11px;
+  left: 48px;
+}
+
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+
+.ol-popup-closer:after {
+  content: "✖";
+}
+
+.edit-form {
+  white-space: nowrap;
+  border: 1px solid #000;
+  margin: 5px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.edit-form h2 {
+  font-size: 1.5em;
+}
+
+.edit-form input[type="button"] {
+  float: right;
+}
+
+.edit-form-elem label {
+  width: 85px;
+  display: inline-block;
+}
+
+.edit-form-elem input[type="text"], .edit-form-elem select {
+  width: 130px;
+}
+
+.offcanvas-body::-webkit-scrollbar {
+  display: none;
+}
+
+/*# sourceMappingURL=index.c92073ef.css.map */

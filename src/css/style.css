@@ -1,0 +1,234 @@
+.map {
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.header {
+    grid-area: header;
+    font-size: 25px;
+    height: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'left right';
+}
+
+.left {
+    grid-area: left;
+    width: 17vw;
+    height: 90vh;
+    border: 5px solid grey;
+}
+
+.toc {
+    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.right {
+    grid-area: right;
+    width: 80vw;
+    height: 90vh;
+    border: 5px solid grey;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+/* 툴팁 메시지 */
+.ol-tooltip {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    color: white;
+    padding: 4px 8px;
+    opacity: 0.7;
+    white-space: nowrap;
+    font-size: 12px;
+    cursor: default;
+    user-select: none;
+}
+
+.ol-tooltip-measure {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.ol-tooltip-static {
+    background-color: #ffcc33;
+    color: black;
+    border: 1px solid white;
+}
+
+.ol-tooltip-measure:before,
+.ol-tooltip-static:before {
+    border-top: 6px solid rgba(0, 0, 0, 0.5);
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    margin-left: -7px;
+    left: 50%;
+}
+
+.ol-tooltip-static:before {
+    border-top-color: #ffcc33;
+}
+
+/* 위도 경도 좌표 표시 */
+.mousePosition {
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(225, 225, 225, 0.6);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+/* 메뉴 버튼 */
+.myButton {
+    background-color: rgba(22, 85, 167, 0.6);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 2px;
+    border: none;
+    align-items: center;
+}
+
+.myButton:hover {
+    background-color: rgb(0, 60, 136, 1);
+}
+
+.myButton.clicked {
+    background-color: rgba(22, 170, 35, 1);
+}
+
+.myButton.clicked:hover {
+    background-color: rgba(22, 170, 35, 1);
+}
+
+.homeButtonDiv {
+    position: relative;
+    display: block;
+    margin: 10px auto auto 10px;
+}
+
+/* spiner */
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner:after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 50%;
+    border: 5px solid rgba(180, 180, 180, 0.6);
+    border-top-color: rgba(0, 0, 0, 0.6);
+    animation: spinner 0.6s linear infinite;
+}
+
+/* popup coordinate */
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 280px;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+}
+
+.ol-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+}
+
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+
+.ol-popup-closer:after {
+    content: "✖";
+}
+
+
+/* asd */
+.edit-form {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    white-space: nowrap;
+}
+
+.edit-form h2 {
+    font-size: 1.5em;
+}
+
+.edit-form input[type="button"] {
+    float: right;
+}
+
+.edit-form-elem label {
+    display: inline-block;
+    width: 85px;
+}
+
+.edit-form-elem input[type="text"],
+.edit-form-elem select {
+    width: 130px;
+}
+.offcanvas-body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera*/
+}
